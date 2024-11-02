@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  start_date: 2024-10-30 08:45:53
+  end_date: 2024-10-30 08:45:53
+  user: one
+  extracted_data: 
+  uploaded_at: 2024-10-30 08:45:53
+  uploaded_by: 
+  data: 
+  error: MyString
+
+two:
+  name: MyString
+  start_date: 2024-10-30 08:45:53
+  end_date: 2024-10-30 08:45:53
+  user: two
+  extracted_data: 
+  uploaded_at: 2024-10-30 08:45:53
+  uploaded_by: 
+  data: 
+  error: MyString

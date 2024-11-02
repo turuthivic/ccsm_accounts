@@ -1,0 +1,42 @@
+<div id="<%= dom_id statement %>">
+  <p>
+    <strong>Name:</strong>
+    <%= statement.name %>
+  </p>
+
+  <p>
+    <strong>Start date:</strong>
+    <%= statement.start_date %>
+  </p>
+
+  <p>
+    <strong>End date:</strong>
+    <%= statement.end_date %>
+  </p>
+
+  <p>
+    <strong>Statement:</strong>
+    <% if statement.statement.attached? %>
+     <%= link_to statement.statement.filename, statement.statement %>
+    <% end %>
+  </p>
+
+  <p>
+    <strong>Uploaded at:</strong>
+    <%= statement.uploaded_at %>
+  </p>
+
+  <p>
+    <strong>Uploaded by:</strong>
+    <%= User.find(statement.user_id).user_name %>
+    <%= User.find(statement.user_id).email %>
+  </p>
+
+  <% if statement.error %>
+    <p>
+      <strong>Error:</strong>
+      <%= statement.error %>
+    </p>
+  <% end %>
+
+</div>

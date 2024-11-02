@@ -1,0 +1,43 @@
+<%= form_with(model: journal_entry) do |form| %>
+  <% if journal_entry.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(journal_entry.errors.count, "error") %> prohibited this journal_entry from being saved:</h2>
+
+      <ul>
+        <% journal_entry.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :type, style: "display: block" %>
+    <%= select_tag :entry_type, options_for_select(JournalEntry.entry_types ) %>
+  </div>
+
+  <div>
+    <%= form.label :amount, style: "display: block" %>
+    <%= form.text_field :amount %>
+  </div>
+
+  <div>
+    <%= form.label :value_date, style: "display: block" %>
+    <%= form.datetime_field :value_date %>
+  </div>
+
+  <div>
+    <%= form.label :creation_date, style: "display: block" %>
+    <%= form.datetime_field :creation_date %>
+  </div>
+
+  <div class="pb-3">
+    <%= form.label 'statement (start date)', style: "display: block" %>
+    <%= select_tag :statement_id, 
+      options_from_collection_for_select(@statements, :id, :start_date) %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
