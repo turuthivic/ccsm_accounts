@@ -43,7 +43,7 @@ gem 'thruster', require: false
 # gem 'combine_pdf', '~> 1.0', '>= 1.0.26'
 
 # Parse PDF data
-gem 'pdf-reader', '~> 2.12'
+gem 'pdf-reader', '~> 2.14'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
